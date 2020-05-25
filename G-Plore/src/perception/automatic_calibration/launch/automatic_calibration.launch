@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="automatic_calibration" type="automatic_calibration_node" name="automatic_calibration_node" output="screen">
+        <param name="topic_lidar1" type="string" value="/ns1/rslidar_points" />
+        <param name="topic_lidar2" type="string" value="/ns2/rslidar_points" />
+        <param name="topic_lidar3" type="string" value="/lslidar_point_cloud" />
+       <rosparam command="load" file="$(find automatic_calibration)/yaml/automatic_calibration.yaml" />
+    </node>
+</launch>

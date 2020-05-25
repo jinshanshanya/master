@@ -1,0 +1,39 @@
+<package>
+
+  <name>sensorfusion</name>
+  <version>0.0.1</version>
+  <description>
+  Object detection / tracking / fusion based on glb_auto perception modules in r3.0.0
+  </description>
+  <maintainer email="zhangzhiming2017@gmail.com">Zane Zhang</maintainer>
+  <author>ZhimingZhang</author>
+  <license>TODO</license>
+  <url type="website">http://www.http://www.glb-auto.com//</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>rostest</build_depend>
+  <build_depend>roslaunch</build_depend>
+
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>tf_conversions</build_depend>
+  <build_depend>angles</build_depend>
+  <build_depend>radar_msgs</build_depend>
+  <build_depend>CameraMsg</build_depend>
+  <build_depend>lidar_msgs</build_depend>
+  <build_depend>fusion_msgs</build_depend>
+
+  <run_depend>roslaunch</run_depend>
+  <run_depend>rostest</run_depend>
+  <run_depend>tf_conversions</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>radar_msgs</run_depend>
+  <run_depend>CameraMsg</run_depend>
+  <run_depend>lidar_msgs</run_depend>
+  <run_depend>fusion_msgs</run_depend>
+
+</package>

@@ -1,0 +1,10 @@
+<launch>
+    <node pkg="show_calibration" type="show_calibration_node" name="show_calibration_node" output="screen">
+        <param name="topic_lidar1" type="string" value="/front_left/rslidar_points" />
+        <param name="topic_lidar2" type="string" value="/front_right/rslidar_points" />
+        <param name="topic_lidar3" type="string" value="/lslidar_point_cloud" />
+       <rosparam command="load" file="$(find show_calibration)/yaml/show_calibration.yaml" />
+    </node>
+
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find show_calibration)/rviz/show_calibration.rviz" />
+</launch>

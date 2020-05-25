@@ -1,0 +1,24 @@
+/ns1/rslidar_points
+/calibration/lidar1
+transformation marix is: 
+-0.681998 -0.731354         0     -2.32
+ 0.731354 -0.681998         0      7.65
+        0         0         1     0.165
+        0         0         0         1
+
+/ns2/rslidar_points
+/calibration/lidar2
+transformation marix is: 
+ 0.707107 -0.707107         0       2.3
+ 0.707107  0.707107         0       7.4
+        0         0         1     0.125
+        0         0         0         1
+
+/lslidar_point_cloud
+/calibration/lidar3
+transformation marix is: 
+ 0.0174524  -0.999848          0       -0.8
+  0.996043   0.017386 -0.0871557      -0.45
+ 0.0871425 0.00152108   0.996195          0
+         0          0          0          1
+

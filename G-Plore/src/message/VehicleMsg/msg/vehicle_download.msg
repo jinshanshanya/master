@@ -1,0 +1,16 @@
+float32 TarAccler
+float32 Tar_steerangle
+uint8 Tar_gear
+uint8 DiveoffReq
+uint8 ADS_mode
+uint8 Stoprequest
+uint8 EndOfTravel
+uint8 Station_In_Out
+uint8 TurnSignal
+uint8 DoubleLight
+uint8 HummerSts
+float32 latAcceleration
+float32 longAcceleration
+float32 Acceleration
+float32 Yaw_rate
+float32 Slope

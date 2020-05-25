@@ -1,0 +1,5 @@
+<launch>
+    <node name="video_node" type="video_publisher_node" pkg="video_publisher" clear_params="true" output="screen">
+        <param name="viedo_path" type="string" value="/home/zhiming/glb-auto/rosbag/2020_03_25_15/VID_20200325_151357.mp4"/>
+    </node>
+</launch>

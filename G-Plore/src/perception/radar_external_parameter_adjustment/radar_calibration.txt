@@ -1,0 +1,41 @@
+original radar topic is: /perception/radarf/object_list
+transformation matrix is: 
+0.0348994 -0.999391         0     -0.03
+ 0.999391 0.0348994         0     7.365
+        0         0         1        -0
+        0         0         0         1
+
+original radar topic is: /perception/radarfl/object_list
+transformation matrix is: 
+          -1 -8.74228e-08            0           -2
+ 8.74228e-08           -1            0            7
+           0           -0            1           -0
+           0            0            0            1
+
+original radar topic is: /perception/radarfr/object_list
+transformation matrix is: 
+    1     0     0   2.3
+    0     1     0 6.745
+    0     0     1    -0
+    0     0     0     1
+
+original radar topic is: /perception/radarb/object_list
+transformation matrix is: 
+5.96046e-08           1           0          -0
+         -1 5.96046e-08           0          -0
+          0           0           1          -0
+          0           0           0           1
+
+original radar topic is: /perception/radarbl/object_list
+transformation matrix is: 
+          -1 -8.74228e-08            0       -1.615
+ 8.74228e-08           -1            0        2.091
+           0           -0            1           -0
+           0            0            0            1
+
+original radar topic is: /perception/radarbr/object_list
+transformation matrix is: 
+    1     0     0   1.5
+    0     1     0 1.745
+    0     0     1    -0
+    0     0     0     1

@@ -1,0 +1,61 @@
+
+<launch>
+
+  <!-- google-log configuration -->
+  <env name="GLOG_minloglevel" value="3" />  <!-- 0: INFO; 1: WARNING; 2: ERROR; 3: FATAL -->
+  <env name="GLOG_log_dir" value="/home/zhiming/test/GLOG/"/>  <!-- fill your log path-->>
+  <env name="GLOG_logtostderr" value="0"/> <!--0:log to yout log path 1:log to stderr;-->>
+  <env name="GLOG_colorlogtostderr" value="1"/>
+  <env name="GLOG_v" value="5"/>
+
+  <node name="perception_yx_node" type="perception_yx_node" pkg="sensorfusion" clear_params="true" output="screen">
+    <!-- parameters for sensor control -->
+    <param name="use_front_left_lidar" type="bool" value="true" />
+    <param name="use_front_right_lidar" type="bool" value="false" />
+    <param name="use_rear_left_lidar" type="bool" value="false" />
+    <param name="use_rear_right_lidar" type="bool" value="false" />
+    <param name="use_cam" type="bool" value="false" />
+    <param name="use_radar" type="bool" value="true" />
+    <!-- parameters for visualization -->
+    <param name="vis_lidar_poly" type="bool" value="false" />
+    <param name="vis_cam_sphere" type="bool" value="false" />
+    <param name="vis_radar_sphere" type="bool" value="true" />
+    <param name="proj_ptcloud" type="bool" value="false" />
+    <!-- parameters for log level -->
+    <param name="log_lidar" type="bool" value="true" />
+    <param name="log_cam" type="bool" value="true" />
+    <param name="log_radar" type="bool" value="true" />
+    <param name="log_fusion" type="bool" value="true" />
+    <!-- other parameters -->
+    <param name="path_config_folder" type="string" value="$(find sensorfusion)" />
+    <rosparam>
+    <!-- frame id setting -->
+    frame_id_cam: vehicle_rear_center
+    frame_id_lidar: vehicle_rear_center
+    frame_id_radar: vehicle_rear_center
+    frame_id_fusion: vehicle_rear_center
+    </rosparam>
+  </node>
+  <!-- <node pkg="tf" type="static_transform_publisher" name="tf_vehcile_radar" args="0 0 0 0 0 0" vehcile_rear_center conti_radar 20/> -->
+
+  <!-- start visualization for radar objs -->
+  <node type="rviz" name="rviz" pkg="rviz" args ="-d $(find sensorfusion)/visualization/test.rviz"/>
+  
+  <!-- replay rosbag -->
+  <!-- <node type="play" name="replay" pkg="rosbag" args ="-l /home/zhiming/glb-auto/rosbag/2020_03_25_15/2020-03-25-15-15-32.bag"/> -->
+
+  <!-- load perception_drvier node -->
+  <include file="$(find perception_lidar)/launch/perception_driver.launch"/>
+
+  <!-- load perception_lidar node -->
+  <include file="$(find perception_lidar)/launch/perception_lidar.launch"/>
+
+  <!-- load video stream -->
+  <!-- <include file="$(find video_publisher)/launch/video.launch"/> -->
+
+  <!-- set tf tree-->
+  <node pkg="tf" type="static_transform_publisher" name="perception2vehicle" args="1 0 0 0 0 0 1 perception vehicle_rear_center 100" />
+
+  <!-- recored video -->
+  <!-- <include file="$(find record_video)/launch/record_video.launch"/> -->
+</launch>

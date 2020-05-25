@@ -1,0 +1,36 @@
+<launch>
+    <node pkg="radar_external_parameter_adjustment" type="radar_external_parameter_adjustment_server" name="radarf_external_parameter_adjustment_server" output="screen">
+        <param name="original_radar_topic" type="string" value="/perception/radarf/object_list" />
+        <param name="transformation_radar_bbox_topic" type="string" value="/calibration/radarf/bounding_box" />
+    </node>
+
+   <node pkg="radar_external_parameter_adjustment" type="radar_external_parameter_adjustment_server" name="radarb_external_parameter_adjustment_server" output="screen">
+        <param name="original_radar_topic" type="string" value="/perception/radarb/object_list" />
+        <param name="transformation_radar_bbox_topic" type="string" value="/calibration/radarb/bounding_box" />
+    </node>
+
+    <node pkg="radar_external_parameter_adjustment" type="radar_external_parameter_adjustment_server" name="radarfl_external_parameter_adjustment_server" output="screen">
+        <param name="original_radar_topic" type="string" value="/perception/radarfl/object_list" />
+        <param name="transformation_radar_bbox_topic" type="string" value="/calibration/radarfl/bounding_box" />
+    </node>
+
+    <node pkg="radar_external_parameter_adjustment" type="radar_external_parameter_adjustment_server" name="radarfr_external_parameter_adjustment_server" output="screen">
+        <param name="original_radar_topic" type="string" value="/perception/radarfr/object_list" />
+        <param name="transformation_radar_bbox_topic" type="string" value="/calibration/radarfr/bounding_box" />
+    </node>
+
+    <node pkg="radar_external_parameter_adjustment" type="radar_external_parameter_adjustment_server" name="radarbl_external_parameter_adjustment_server" output="screen">
+        <param name="original_radar_topic" type="string" value="/perception/radarbl/object_list" />
+        <param name="transformation_radar_bbox_topic" type="string" value="/calibration/radarbl/bounding_box" />
+    </node>
+
+    <node pkg="radar_external_parameter_adjustment" type="radar_external_parameter_adjustment_server" name="radarbr_external_parameter_adjustment_server" output="screen">
+        <param name="original_radar_topic" type="string" value="/perception/radarbr/object_list" />
+        <param name="transformation_radar_bbox_topic" type="string" value="/calibration/radarbr/bounding_box" />
+    </node>
+
+    <node pkg="rqt_reconfigure" type="rqt_reconfigure" name="rqt_reconfigure" output="screen"/>
+
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find radar_external_parameter_adjustment)/rviz/radar_external_parameter_adjustment.rviz" />
+
+</launch>

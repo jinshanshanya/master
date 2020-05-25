@@ -1,0 +1,69 @@
+<launch>
+
+    <group ns="front_left">
+    <node  name="rslidar_node" pkg="rslidar_driver" type="rslidar_node" output="screen" >
+        <param name="model" value="RS32"/>
+        <!--param name="pcap" value="/home/tony-sti/lidar_data/lm75-170616-roadtest.pcap"/ -->
+        <param name="device_ip" value="192.168.43.200" />
+        <param name="msop_port" value="6690"/>
+        <param name="difop_port" value="7780"/>
+    </node>
+
+    <node  name="cloud_node" pkg="rslidar_pointcloud" type="cloud_node" output="screen" >
+        <param name="model" value="RS32"/>
+        <param name="curves_path" value="$(find rslidar_pointcloud)/data/rs_lidar_32/curves.csv" />
+        <param name="angle_path" value="$(find rslidar_pointcloud)/data/rs_lidar_32/angle.csv" />
+        <param name="channel_path" value="$(find rslidar_pointcloud)/data/rs_lidar_32/ChannelNum.csv" />
+    </node>
+    </group>
+
+    <group ns="front_right">
+    <node  name="rslidar_node" pkg="rslidar_driver" type="rslidar_node" output="screen" >
+        <param name="model" value="RS32"/>
+        <!--param name="pcap" value="/home/tony-sti/lidar_data/lm75-170616-roadtest.pcap"/ -->
+        <param name="device_ip" value="192.168.43.201"/>
+        <param name="msop_port" value="6691"/>
+        <param name="difop_port" value="7781"/>
+    </node>
+        
+    <node  name="cloud_node" pkg="rslidar_pointcloud" type="cloud_node" output="screen" >
+        <param name="model" value="RS32"/>
+        <param name="curves_path" value="$(find rslidar_pointcloud)/data/rs_lidar_32/curves.csv" />
+        <param name="angle_path" value="$(find rslidar_pointcloud)/data/rs_lidar_32/angle.csv" />
+        <param name="channel_path" value="$(find rslidar_pointcloud)/data/rs_lidar_32/ChannelNum.csv" />
+    </node>
+    </group>
+
+    <node pkg="lslidar_c16_driver" type="lslidar_c16_driver_node" name="lslidar_c16_driver_node" output="screen">
+        <param name="lidar_ip" value="192.168.43.202"/>
+        <param name="device_port" value="2368"/>
+        <param name="add_multicast" value="false"/>
+        <param name="group_ip" value="224.1.1.2"/>
+    </node>
+
+    <node pkg="lslidar_c16_decoder" type="lslidar_c16_decoder_node" name="lslidar_c16_decoder_node" output="screen">
+        <param name="frame_id" value="perception"/>
+        <param name="point_num" value="2000"/>
+        <param name="channel_num" value="0"/>
+        <param name="angle_disable_min" value="0"/>
+        <param name="angle_disable_max" value="0"/>
+        <param name="angle3_disable_min" value="0"/>
+        <param name="angle3_disable_max" value="0"/>
+        <param name="min_range" value="0.15"/>
+        <param name="max_range" value="150.0"/>
+        <param name="frequency" value="10.0"/>
+        <param name="publish_point_cloud" value="true"/>
+        <param name="publish_scan" value="true"/>
+        <param name="use_gps_ts" value="false"/>
+    </node>
+    
+    <node pkg="perception_radar" type="perception_radar_node" name="perception_radar_node" output="screen">
+        <rosparam command="load" file="$(find perception_radar)/yaml/perception_radar.yaml" />
+    </node>
+
+    <node pkg="usb_cam" type="usb_cam_node" name="usb_cam_node" output="screen">
+    </node>
+
+    <node pkg="IFSimu" type="IFSimu_node" name="IFSimu_node" output="screen" />
+
+</launch>

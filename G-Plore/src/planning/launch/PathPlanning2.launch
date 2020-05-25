@@ -1,0 +1,6 @@
+<launch>
+
+  <node pkg="DecisionControl" type="PathPlanningNode.py" name="PathPlanningNode.py" output="screen" />
+
+</launch>
+

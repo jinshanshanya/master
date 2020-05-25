@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="perception_lidar" type="perception_lidar_node" name="perception_lidar_node" output="screen">
+        <param name="topic_lidar1" type="string" value="/front_left/rslidar_points" />
+        <param name="topic_lidar2" type="string" value="/front_right/rslidar_points" />
+        <param name="topic_lidar3" type="string" value="/lslidar_point_cloud" />
+        <rosparam command="load" file="$(find perception_lidar)/yaml/perception_lidar.yaml" />
+    </node>
+</launch>

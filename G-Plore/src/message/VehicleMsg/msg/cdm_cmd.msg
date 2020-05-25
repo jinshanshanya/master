@@ -1,0 +1,17 @@
+uint8 Veh_Mass
+uint8 Front_Hydraulic_BrakeFd
+uint8 Rear_Hydraulic_BrakeFd
+uint8 DriveModeFd
+uint8 Load_BrakeFd
+#uint8 Compartment_Up
+#uint8 Compartment_Down
+#uint8 Compartment_UpHighest
+#uint8 Compartment_UpLowest
+uint8 Compartment_Fd
+uint8 Vehicle_FaultLevel
+float32 Veh_Spd
+uint8 Fuel_Signal
+uint16 Engine_Speed
+int8 TCM_GearFd
+uint32 Steer_fd
+uint8 Lat_State

@@ -1,0 +1,48 @@
+radarb:
+translation_x: -0.42
+translation_y: 0.62
+translation_z: 0
+rotation_x: 0
+rotation_y: 0
+rotation_z: 90.0
+
+radarbl:
+translation_x: 1.615
+translation_y: -2.091
+translation_z: 0
+rotation_x: 0
+rotation_y: 0
+rotation_z: 180.0
+
+radarbr:
+translation_x: -1.5
+translation_y: -1.745
+translation_z: 0
+rotation_x: 0
+rotation_y: 0
+rotation_z: 0
+
+radarf:
+translation_x: 0.03
+translation_y: -7.365
+translation_z: 0
+rotation_x: 0
+rotation_y: 0
+rotation_z: -88.0
+
+radarfl:
+translation_x: 2.0
+translation_y: -7.0
+translation_z: 0
+rotation_x: 0
+rotation_y: 0
+rotation_z: 180.0
+
+radarfr:
+translation_x: -2.3
+translation_y: -6.745
+translation_z: 0
+rotation_x: 0
+rotation_y: 0
+rotation_z: 0
+

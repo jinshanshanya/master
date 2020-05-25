@@ -1,0 +1,9 @@
+float32 Vehicle_speed
+float32 Vehicle_speedQuality
+float32 EPS_SteerAng
+float32 EPS_SteerAngQuality
+float32 BMS_BattSOC
+float32 BMS_BattSOCQuality
+uint8 Tar_gearFeed
+uint8 Tar_gearFeedQuality
+uint8 Drive_Mode

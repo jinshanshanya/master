@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="perception_radar" type="perception_radar_node" name="perception_radar_node" output="screen">
+        <rosparam command="load" file="$(find perception_radar)/yaml/perception_radar.yaml" />
+    </node>
+</launch>
