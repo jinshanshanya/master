@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<package>
+  <name>stanley_control</name>
+  <version>0.1.0</version>
+  <description>The stanley_control package</description>
+  <license>Apache 2</license>
+  <!-- One maintainer tag required, multiple allowed, one person per tag -->
+  <!-- Example:  -->
+  <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
+ <maintainer email="kenji.miyake@tier4.jp">Kenji Miyake</maintainer>
+  <maintainer email="horibe.takamasa@gmail.com">Takamasa Horibe</maintainer>
+
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <!-- Commonly used license strings: -->
+  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
+  <license>TODO</license>
+    <depend>autoware_control_msgs</depend>
+  <depend>autoware_planning_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>roscpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>tf2</depend>
+  <depend>tf2_eigen</depend>
+  <depend>tf2_ros</depend>
+
+  <!-- <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>autoware_control_msgs</build_depend> 
+  <build_depend>autoware_planning_msgs</build_depend> 
+  <build_depend>image_transport</build_depend>
+  <!-- <build_export_depend>roscpp</build_export_depend> -->
+  <!-- <build_export_depend>rospy</build_export_depend> -->
+  <!-- <build_export_depend>std_msgs</build_export_depend> -->
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend> 
+  <run_depend>autoware_control_msgs</run_depend>
+  <run_depend>autoware_planning_msgs</run_depend> -->
+  <!-- <exec_depend>image_transport</exec_depend> -->
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>
